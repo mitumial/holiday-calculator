@@ -4,5 +4,5 @@
     <mat-hint>Is this a holiday?</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-    <button mat-stroked-button>Verify date</button>
+    <button mat-stroked-button (click)="openDialog()">Verify date</button>
 </mat-form-field>

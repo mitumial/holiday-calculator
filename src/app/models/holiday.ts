@@ -1,10 +1,10 @@
-import { type } from "./type";
+import { Type } from "./type";
 
-export interface holiday {
+export interface Holiday {
     id: number;
     name: string;
     day: number;
     month: number;
     easterDays: number;
-    type: type
+    type: Type
 }

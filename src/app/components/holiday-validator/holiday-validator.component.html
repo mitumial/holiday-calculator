@@ -3,6 +3,7 @@
     <input matInput [matDatepicker]="picker">
     <mat-hint>Is this a holiday?</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)" />
     <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-    <button mat-stroked-button (click)="openDialog()">Verify date</button>
+    <button mat-stroked-button (click)="onVerifyDate()">Verify date</button>
 </mat-form-field>

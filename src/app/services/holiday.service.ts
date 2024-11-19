@@ -12,12 +12,13 @@ export class HolidayService {
   url: string;
 
   constructor(private http: HttpClient) { 
-    this.url = `${environment.urlBase}/holiday`
+    // no lo llame de environment porque angular seguia cambiando el localhost
+    this.url = `http://localhost:8080/api/holiday`
   }
   public findAll(): Observable<Holiday[]> {
     return this.http.get<Holiday[]>(`${this.url}/all`);
   }
   public verifyDate(year: number, month: number, day: number): Observable<string> {
-    return this.http.get<string>(`${this.url}/${year}/${month}/${day}`);
+    return this.http.get(`${this.url}/verify/${year}/${month}/${day}`, {responseType: 'text'});
   }
 }

@@ -1,6 +1,5 @@
 <mat-form-field class="frm-validator">
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
     <mat-hint>Is this a holiday?</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)" />

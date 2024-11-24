@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
+import { ReferenciasMaterialModule } from '../../referencias-material/referencias-material.module';
 
 export interface DialogData {
   message: string;
@@ -10,7 +11,7 @@ export interface DialogData {
   selector: 'app-holiday-dialog',
   standalone: true,
   imports: [
-    MatButtonModule, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle
+    ReferenciasMaterialModule, MatButtonModule, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle
   ],
   templateUrl: './holiday-dialog.component.html',
   styleUrl: './holiday-dialog.component.css'

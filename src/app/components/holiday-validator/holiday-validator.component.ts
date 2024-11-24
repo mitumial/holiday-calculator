@@ -10,12 +10,13 @@ import {
 } from '@angular/material/dialog';
 import { HolidayDialogComponent } from '../holiday-dialog/holiday-dialog.component';
 import { HolidayService } from '../../services/holiday.service';
+import { ReferenciasMaterialModule } from '../../referencias-material/referencias-material.module';
 
 @Component({
   selector: 'app-holiday-validator',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule,MatDividerModule,MatButtonModule],
+  imports: [ReferenciasMaterialModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,MatDividerModule,MatButtonModule],
   templateUrl: './holiday-validator.component.html',
   styleUrl: './holiday-validator.component.css'
 })

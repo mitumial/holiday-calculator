@@ -1,3 +1,7 @@
 .frm-validator{
     padding: 2rem;
 }
+
+mat-hint{
+    color: white;
+}

@@ -1,19 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { Holiday} from '../models/holiday';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HolidayService {
-
   url: string;
 
   constructor(private http: HttpClient) { 
-    // no lo llame de environment porque angular seguia cambiando el localhost
-    this.url = `http://localhost:8080/api/holiday`
+    this.url = `${environment.urlBase}/holiday`;
   }
   public findAll(): Observable<Holiday[]> {
     return this.http.get<Holiday[]>(`${this.url}/all`);

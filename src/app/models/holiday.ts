@@ -6,5 +6,6 @@ export interface Holiday {
     day: number;
     month: number;
     easterDays: number;
-    type: Type
+    type: Type;
+    dateOfYear: Date
 }

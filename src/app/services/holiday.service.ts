@@ -11,12 +11,12 @@ export class HolidayService {
   url: string;
 
   constructor(private http: HttpClient) { 
-    this.url = `${environment.urlBase}/holiday`;
+    this.url = `${environment.urlBase}/festivos`;
   }
-  public findAll(): Observable<Holiday[]> {
-    return this.http.get<Holiday[]>(`${this.url}/all`);
+  public findByYear(year: number): Observable<Holiday[]> {
+    return this.http.get<Holiday[]>(`${this.url}/obtener/${year}`);
   }
   public verifyDate(year: number, month: number, day: number): Observable<string> {
-    return this.http.get(`${this.url}/verify/${year}/${month}/${day}`, {responseType: 'text'});
+    return this.http.get(`${this.url}/verificar/${year}/${month}/${day}`, {responseType: 'text'});
   }
 }
